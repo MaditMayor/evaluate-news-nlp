@@ -1,0 +1,118 @@
+// Global styles
+$font-family-primary: 'Oswald', sans-serif;
+$font-family-secondary: 'Ranga', cursive;
+$primary-color: #4CAF50;
+$secondary-color: #ffffff;
+$footer-bg: #333;
+$footer-color: #fff;
+
+// Header styles
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-family: $font-family-primary;
+  
+  div {
+    font-size: 1.2rem;
+  }
+}
+
+// Main section styles
+main {
+  padding: 40px;
+  font-family: $font-family-primary;
+  
+  section {
+    margin-bottom: 30px;
+    
+    &:first-child {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    &:nth-child(2) {
+      background-color: #fafafa;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+  }
+}
+
+// Form styling
+#urlForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Results section styles
+#results {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+// Footer styles
+footer {
+  background-color: $footer-bg;
+  color: $footer-color;
+  text-align: center;
+  padding: 15px;
+  font-family: $font-family-secondary;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    
+    div {
+      margin-bottom: 10px;
+    }
+  }
+  
+  #urlForm input,
+  #urlForm button {
+    width: 90%;
+  }
+}
