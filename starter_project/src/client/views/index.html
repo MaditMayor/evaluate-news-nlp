@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-    </head>
-
-    <body>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Evaluate News NLP</title>
+        <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"/>
         <header>
             <div class="">
                 Logo
@@ -15,11 +15,10 @@
                 navigation
             </div>
         </header>
-
         <main>
             <section>
                 <form id="urlForm">
-                    <input id="name" type="text" name="url" placeholder="Enter URL" required>
+                    <input id="url" type="text" name="url" placeholder="Enter URL" required>
                     <button id="submitButton" type="submit">Submit</button>
                 </form>
                 
@@ -34,6 +33,16 @@
         <footer>
             <p>This is a footer</p>
         </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
 
     </body>
 </html>
